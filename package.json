@@ -2,6 +2,7 @@
   "name": "csdlnc-team-10-big-practice",
   "description": "JavaScript big-practice",
   "source": "src/index.html",
+  "main": "src/js/app.js",
   "scripts": {
     "start": "parcel --no-cache",
     "watch": "parcel watch",
@@ -20,5 +21,12 @@
     "eslint": "8.39.0",
     "parcel": "2.8.3",
     "prettier": "2.8.8"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "16.0.3",
+    "express": "4.18.2",
+    "mongoose": "7.1.0",
+    "nodemon": "2.0.22"
   }
 }
