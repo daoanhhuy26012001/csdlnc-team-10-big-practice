@@ -1,0 +1,36 @@
+:root {
+  /* FONT-FAMILY */
+  --ff-primary: 'roboto-400', sans-serif;
+  --ff-secondary: 'roboto-900', sans-serif;
+
+  /* FONT-SIZE */
+  --fs-small: 1em;
+  --fs-medium: 2em;
+  --fs-large: 3em;
+
+  /* LINE-HEIGHT */
+  --lh-small: 0.5em;
+  --lh-medium: 1em;
+  --lh-large: 1.5em;
+
+  /* LETTER-SPACING */
+  --spacing-primary: 0.125em;
+
+  /* TRANSITION */
+  --transition-primary: all 0.3s linear;
+
+  /* RADIUS */
+  --radius-primary: 0.5em;
+
+  /* TEXT-TRANSFORM */
+  --transform-primary: capitalize;
+
+  /* BOX-SHADOW */
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  /* COLOR */
+  --clr-brown-100: #d3b5a3;
+  --clr-brown-200: #3d3935;
+  --clr-grey-100: #7a7a7a;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "csdlnc-team-10-big-practice",
+  "description": "JavaScript big-practice",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --no-cache",
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "github",
+    "url": "git@github.com:daoanhhuy26012001/csdlnc-team-10-big-practice.git"
+  },
+  "author": "Huy Dao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daoanhhuy26012001/csdlnc-team-10-big-practice/issues"
+  },
+  "devDependencies": {
+    "eslint": "8.39.0",
+    "parcel": "2.8.3",
+    "prettier": "2.8.8"
+  }
+}
