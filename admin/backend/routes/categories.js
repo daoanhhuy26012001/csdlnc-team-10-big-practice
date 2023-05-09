@@ -1,21 +1,21 @@
-const router = require('express').Router();
-const categoryController = require('../controllers/category.controller');
+const router = require("express").Router();
+const categoryController = require("../controllers/category.controller");
 
 // Middlewares to handle incomming requests
 function requireLogin(req, res, next) {
   if (req.session && req.session.user) {
     return next();
   } else {
-    return res.status(401).send('Required Login');
+    return res.status(401).send("Required Login");
   }
 }
 
-router.get('/',requireLogin, categoryController.getList);
-router.post('/add', requireLogin, categoryController.create);
+router.get("/", requireLogin, categoryController.getList);
+router.post("/add", requireLogin, categoryController.create);
 
-router.get('/:id',requireLogin, categoryController.get);
-router.put('/update/:id', requireLogin,categoryController.update);
-router.delete('/:id', requireLogin,categoryController.remove);
+router.get("/:id", requireLogin, categoryController.get);
+router.put("/update/:id", requireLogin, categoryController.update);
+router.delete("/:id", requireLogin, categoryController.remove);
 
 module.exports = router;
 

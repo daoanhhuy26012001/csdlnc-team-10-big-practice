@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ProductSchema = new Schema(
@@ -7,7 +7,7 @@ const ProductSchema = new Schema(
       type: String,
       unique: true,
       trim: true,
-      required: [true, 'Cannot be empty'],
+      required: [true, "Cannot be empty"],
     },
     price: { type: Number, required: true },
     discount: { type: Number, required: true },
@@ -15,20 +15,20 @@ const ProductSchema = new Schema(
     description: { type: String },
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      ref: "User",
     },
     category: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Category',
+      ref: "Category",
     },
     uploadedImage: {
-      type: String
-    }
+      type: String,
+    },
   },
-  
+
   {
     timestamps: true,
   }
 );
 
-module.exports = mongoose.model('Product', ProductSchema);
+module.exports = mongoose.model("Product", ProductSchema);

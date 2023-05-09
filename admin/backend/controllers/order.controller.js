@@ -32,12 +32,9 @@ exports.getList = async (req, res) => {
         if (data && data.details) {
           for (let j = 0; j < data.details.length; j++) {
             try {
-              const product = await Product
-                .findById(data.details[j].productId)
-                .populate('category')
-                .exec(
-
-                );
+              const product = await Product.findById(data.details[j].productId)
+                .populate("category")
+                .exec();
 
               data.details[j].product = product;
             } catch (error) {
@@ -51,7 +48,7 @@ exports.getList = async (req, res) => {
   });
 };
 
-exports.get =async (req,res) => {
+exports.get = async (req, res) => {
   Order.findById(req.params.id).exec(async (err, orders) => {
     if (err) {
       res.status(500).send({ err });
@@ -59,15 +56,12 @@ exports.get =async (req,res) => {
 
     for (let j = 0; j < orders.details.length; j++) {
       try {
-        console.log(orders.details[j].productId)
-        const product = await Product
-          .findById(orders.details[j].productId)
-          .populate('category')
-          .exec(
+        console.log(orders.details[j].productId);
+        const product = await Product.findById(orders.details[j].productId)
+          .populate("category")
+          .exec();
 
-          );
-
-          orders.details[j].product = product;
+        orders.details[j].product = product;
       } catch (error) {
         res.status(500).send({ err });
       }
@@ -130,15 +124,12 @@ exports.get =async (req,res) => {
   //   }
   //   res.json({ orders: orders });
   // });
-}
-
-
+};
 
 exports.update = (req, res) => {
-
-  const status = req.body.status
+  const status = req.body.status;
   const data = {
-    status: status
+    status: status,
   };
   Order.findByIdAndUpdate(req.params.id, data, (err, order) => {
     if (err) return res.status(500).send(err);
@@ -149,13 +140,12 @@ exports.update = (req, res) => {
 };
 
 exports.remove = (req, res) => {
-  Order.findByIdAndRemove(req.params.id)
-    .then((order) => {
-      if (!order) {
-        return res.status(404).send({
-          message: "Order not found with id " + req.params.id,
-        });
-      }
-      res.send({ message: "Order deleted successfully!" });
-    });
+  Order.findByIdAndRemove(req.params.id).then((order) => {
+    if (!order) {
+      return res.status(404).send({
+        message: "Order not found with id " + req.params.id,
+      });
+    }
+    res.send({ message: "Order deleted successfully!" });
+  });
 };

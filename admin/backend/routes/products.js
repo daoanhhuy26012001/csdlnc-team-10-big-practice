@@ -1,25 +1,24 @@
-const router = require('express').Router();
-const productController = require('../controllers/product.controller');
+const router = require("express").Router();
+const productController = require("../controllers/product.controller");
 
 function requireLogin(req, res, next) {
   if (req.session && req.session.user) {
     return next();
   } else {
-    return res.status(401).send('Required Login');
+    return res.status(401).send("Required Login");
   }
 }
 
-router.get('/',requireLogin, productController.getList);
-router.get('/:id',requireLogin, productController.get);
-router.post('/:id/uploads', requireLogin, productController.uploadImages);
+router.get("/", requireLogin, productController.getList);
+router.get("/:id", requireLogin, productController.get);
+router.post("/:id/uploads", requireLogin, productController.uploadImages);
 
-router.post('/add', requireLogin, productController.create);
+router.post("/add", requireLogin, productController.create);
 
-router.put('/update/:id', requireLogin ,productController.update);
-router.delete('/:id',requireLogin, productController.remove);
+router.put("/update/:id", requireLogin, productController.update);
+router.delete("/:id", requireLogin, productController.remove);
 
 module.exports = router;
-
 
 // router.route('/').get((req, res) => {
 //   Product.find()

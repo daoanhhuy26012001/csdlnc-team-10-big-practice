@@ -1,40 +1,56 @@
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import EditIcon from "@material-ui/icons/Edit";
+import DeleteIcon from "@material-ui/icons/Delete";
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import useCartState from "../state/cart.state";
+import { useState as useStateHook } from "@hookstate/core";
 
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import EditIcon from '@material-ui/icons/Edit';
-import DeleteIcon from '@material-ui/icons/Delete';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import useCartState from '../state/cart.state'
-import { useState as useStateHook } from '@hookstate/core';
-
-const Product = props => (
+const Product = (props) => (
   <tr>
     <td>{props.product.name}</td>
-    <td><img width="100px" height="100px" src={`http://localhost:5000/uploads/${props.product.uploadedImage}`} /></td>
+    <td>
+      <img
+        width="100px"
+        height="100px"
+        src={`http://localhost:3000/uploads/${props.product.uploadedImage}`}
+      />
+    </td>
     <td>{props.product.category.name} </td>
-    <td>{props.product.price - props.product.price / 100 * props.product.discount}</td>
+    <td>
+      {props.product.price -
+        (props.product.price / 100) * props.product.discount}
+    </td>
     <td>{props.product.discount}</td>
     <td>
-      <a className="btn btn-danger" href="#" onClick={() => { props.deleteProduct(props.product) }}>Delete</a>
+      <a
+        className="btn btn-danger"
+        href="#"
+        onClick={() => {
+          props.deleteProduct(props.product);
+        }}
+      >
+        Delete
+      </a>
     </td>
   </tr>
-)
+);
 
 const ProductCart = (props) => {
   const xxx = useCartState();
   const [currentProduct, setCurrentProduct] = useState();
   const [id, setId] = useState();
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
   const totalAmount = xxx.sumPrice;
-  console.log('total', totalAmount)
+  console.log("total", totalAmount);
 
   useEffect(() => {
     // axios.get('/api/products/' + props.match.params.id)
@@ -47,20 +63,16 @@ const ProductCart = (props) => {
   }, []);
 
   const onChangeName = (e) => {
-    setName(
-      e.target.value
-    );
-  }
+    setName(e.target.value);
+  };
 
   const onChangePhone = (e) => {
-    setPhone(e.target.value
-    );
-  }
+    setPhone(e.target.value);
+  };
 
   const onChangeAddress = (e) => {
-    setAddress(e.target.value
-    );
-  }
+    setAddress(e.target.value);
+  };
 
   const [open, setOpen] = React.useState(false);
 
@@ -73,7 +85,7 @@ const ProductCart = (props) => {
   };
 
   const handleDelete = () => {
-    xxx.remove(currentProduct)
+    xxx.remove(currentProduct);
     setOpen(false);
     // axios.delete('/api/products/' + currentProduct.id).then(res => console.log(res.data));
   };
@@ -81,29 +93,29 @@ const ProductCart = (props) => {
   const deleteProduct = (product) => {
     setOpen(true);
     setCurrentProduct(product);
-  }
+  };
 
   const Pay = (e) => {
     e.preventDefault();
 
-    let detailObject = {}
+    let detailObject = {};
 
     xxx.list.forEach((product, index) => {
       if (detailObject[product._id]) {
-        detailObject[product._id] = detailObject[product._id] + 1
+        detailObject[product._id] = detailObject[product._id] + 1;
       } else {
         detailObject[product._id] = 1;
       }
-    })
+    });
 
     // convert
-    let details = []
+    let details = [];
 
     for (const [key, value] of Object.entries(detailObject)) {
       details.push({
-        "productId": key,
-        "quantity": value
-      })
+        productId: key,
+        quantity: value,
+      });
     }
 
     console.log(details);
@@ -114,34 +126,39 @@ const ProductCart = (props) => {
       phone,
       totalAmount,
       details,
-    }
+    };
 
-    axios.post('/api/orders', cart)
-      .then(res => {
-        console.log(res.data);
-        alert('You have successfully ordered. We will contact you as soon as possible')
-        window.location = "/"
-      });
-
-  }
-
+    axios.post("/api/orders", cart).then((res) => {
+      console.log(res.data);
+      alert(
+        "You have successfully ordered. We will contact you as soon as possible"
+      );
+      window.location = "/";
+    });
+  };
 
   const productList = () => {
-    console.log('productList=', xxx.list);
-    return xxx.list.map((currentproduct, index) =>
-      <Product product={currentproduct} deleteProduct={deleteProduct} key={index} />
-    )
-  }
+    console.log("productList=", xxx.list);
+    return xxx.list.map((currentproduct, index) => (
+      <Product
+        product={currentproduct}
+        deleteProduct={deleteProduct}
+        key={index}
+      />
+    ));
+  };
 
   return (
-    <div className="d-flex flex-column justify-content-center mt-2 mr-5 ml-5" >
+    <div className="d-flex flex-column justify-content-center mt-2 mr-5 ml-5">
       <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Are you sure delete product ?"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">
+          {"Are you sure delete product ?"}
+        </DialogTitle>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             No
@@ -167,9 +184,7 @@ const ProductCart = (props) => {
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody >
-          {productList()}
-        </tbody>
+        <tbody>{productList()}</tbody>
       </table>
       <td className="btn btn-dark mr-5 ml-5">Total amount: {xxx.sumPrice}</td>
 
@@ -180,9 +195,12 @@ const ProductCart = (props) => {
           </div>
           <div className="input-group form-group">
             <div className="input-group-prepend">
-              <span className="input-group-text"><i className="fas fa-user" /></span>
+              <span className="input-group-text">
+                <i className="fas fa-user" />
+              </span>
             </div>
-            <input type="text"
+            <input
+              type="text"
               required
               className="form-control"
               value={name}
@@ -192,9 +210,12 @@ const ProductCart = (props) => {
           </div>
           <div className="input-group form-group">
             <div className="input-group-prepend">
-              <span className="input-group-text"><i className="fas fa-map-marker-alt" /></span>
+              <span className="input-group-text">
+                <i className="fas fa-map-marker-alt" />
+              </span>
             </div>
-            <input type="text"
+            <input
+              type="text"
               required
               className="form-control"
               value={address}
@@ -204,9 +225,12 @@ const ProductCart = (props) => {
           </div>
           <div className="input-group form-group">
             <div className="input-group-prepend">
-              <span className="input-group-text"><i className="fas fa-phone" /></span>
+              <span className="input-group-text">
+                <i className="fas fa-phone" />
+              </span>
             </div>
-            <input type="text"
+            <input
+              type="text"
               required
               className="form-control"
               value={phone}
@@ -216,10 +240,10 @@ const ProductCart = (props) => {
           </div>
         </div>
       </div>
-      <button onClick={Pay} className="btn btn-danger mb-4 mr-5 ml-5">Pay</button>
+      <button onClick={Pay} className="btn btn-danger mb-4 mr-5 ml-5">
+        Pay
+      </button>
     </div>
-
-
   );
-}
+};
 export default ProductCart;

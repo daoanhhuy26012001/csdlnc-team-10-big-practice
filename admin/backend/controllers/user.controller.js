@@ -1,5 +1,5 @@
-const session = require('express-session');
-const User = require('../models/user.model');
+const session = require("express-session");
+const User = require("../models/user.model");
 
 exports.create = (req, res) => {
   const user = new User({
@@ -23,17 +23,17 @@ exports.login = (req, res) => {
     } else if (!user) {
       return res
         .status(500)
-        .send({ err: 'Username and Password are incorrect' });
+        .send({ err: "Username and Password are incorrect" });
     } else if (req.body.password === user.password) {
       req.session.user = user;
       res.json({
         user: user,
-        login: 'success',
+        login: "success",
       });
     } else {
       return res
         .status(500)
-        .send({ err: 'Username and Password are incorrect' });
+        .send({ err: "Username and Password are incorrect" });
     }
   });
 };
@@ -44,7 +44,7 @@ exports.logout = (req, res) => {
       if (err) {
         res.status(500).send({ err });
       } else {
-        res.json({ logout: 'success' });
+        res.json({ logout: "success" });
       }
     });
   }

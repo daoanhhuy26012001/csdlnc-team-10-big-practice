@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CategorySchema = new Schema(
@@ -7,16 +7,16 @@ const CategorySchema = new Schema(
       type: String,
       unique: true,
       trim: true,
-      required: [true, 'Cannot be empty'],
+      required: [true, "Cannot be empty"],
     },
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      ref: "User",
     },
     products: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product',
+        ref: "Product",
       },
     ],
   },
@@ -25,4 +25,4 @@ const CategorySchema = new Schema(
   }
 );
 
-module.exports = mongoose.model('Category', CategorySchema);
+module.exports = mongoose.model("Category", CategorySchema);

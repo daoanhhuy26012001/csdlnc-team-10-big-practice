@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const OrderSchema = new Schema(
@@ -6,17 +6,17 @@ const OrderSchema = new Schema(
     name: {
       type: String,
       trim: true,
-      required: [true, 'Cannot be empty'],
+      required: [true, "Cannot be empty"],
     },
     address: {
       type: String,
       trim: true,
-      required: [true, 'Cannot be empty'],
+      required: [true, "Cannot be empty"],
     },
     phone: {
       type: String,
       trim: true,
-      required: [true, 'Cannot be empty'],
+      required: [true, "Cannot be empty"],
     },
     status: {
       // Order status: New, Pending, Approved...
@@ -36,14 +36,14 @@ const OrderSchema = new Schema(
         },
         product: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: 'Product',
-        }
-      }
-    ]
+          ref: "Product",
+        },
+      },
+    ],
   },
   {
     timestamps: true,
   }
 );
 
-module.exports = mongoose.model('Order', OrderSchema);
+module.exports = mongoose.model("Order", OrderSchema);
