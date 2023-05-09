@@ -1,52 +1,51 @@
 ﻿[
-	{
-		"name": "Laptop HP PROBOOK 440 G9 (6M0X2PA) (Intel Core i5-1235U, Ram 8GB, SSD 256GB, màn hình 14 inch FHD, Win 11 bản quyền, màu bạc) Hàng chính hãng, Bảo hành 12 tháng",
-		"price": "20.090.000₫",
-		"discount": "10",
-		"guarantee": "Hàng chính hãng, Bảo hành 12 tháng",
-		"category": "HP",
-		"description": "Laptop HP ProBook 440 G9 - 6M0X2PA với những cải tiến, nâng cấp từ ngoại hình lẫn các cấu hình, hiệu năng bên trong nhằm đáp ứng tốt các nhu cầu sử dụng của người dùng. Hiệu năng nổi trội đến từ sức mạnh của Intel Core i5 thế hệ thứ 12 hứa hẹn sẽ mang đến nhiều trải nghiệm vượt ngoài mong đợi cho bạn.",
-		"image": "https://philong.com.vn/media/product/250-28575-3.jpg"
-	}
+  {
+    "name": "Laptop HP PROBOOK 440 G9 (6M0X2PA) (Intel Core i5-1235U, Ram 8GB, SSD 256GB, màn hình 14 inch FHD, Win 11 bản quyền, màu bạc) Hàng chính hãng, Bảo hành 12 tháng",
+    "price": "20.090.000₫",
+    "discount": "10",
+    "guarantee": "Hàng chính hãng, Bảo hành 12 tháng",
+    "category": "HP",
+    "description": "Laptop HP ProBook 440 G9 - 6M0X2PA với những cải tiến, nâng cấp từ ngoại hình lẫn các cấu hình, hiệu năng bên trong nhằm đáp ứng tốt các nhu cầu sử dụng của người dùng. Hiệu năng nổi trội đến từ sức mạnh của Intel Core i5 thế hệ thứ 12 hứa hẹn sẽ mang đến nhiều trải nghiệm vượt ngoài mong đợi cho bạn.",
+    "image": "https://philong.com.vn/media/product/250-28575-3.jpg"
+  },
 
-	{
-		"name": "Laptop Dell Vostro 5620 70282719 (i5-1240P, Ram 16GB, SSD 512GB, Màn hình 16 inch FHD, Win 11 Home, Xám )",
-		"price": "25.490.000₫",
-		"discount": "15",
-		"guarantee": "Hàng chính hãng, Bảo hành 12 tháng",
-		"category": "DELL",
-		"description": "ntel Core i5-1240P (1.70 GHz up to 4.20 GHz, 12MB, 12 nhân/ 16 luồng)RAM 16GB DDR4 3200MHzSSD 512GB M.2 PCIe Intel Iris Xe GraphicsMàn hình 16 inch FHD+ (1920 x 1200) Windows 11 home SL 64-bit + Office home & student 2021Vỏ nhôm màu xám, 1.9kg",
-		"image": "https://philong.com.vn/media/product/250-27674-3.png"
-	}
+  {
+    "name": "Laptop Dell Vostro 5620 70282719 (i5-1240P, Ram 16GB, SSD 512GB, Màn hình 16 inch FHD, Win 11 Home, Xám )",
+    "price": "25.490.000₫",
+    "discount": "15",
+    "guarantee": "Hàng chính hãng, Bảo hành 12 tháng",
+    "category": "DELL",
+    "description": "ntel Core i5-1240P (1.70 GHz up to 4.20 GHz, 12MB, 12 nhân/ 16 luồng)RAM 16GB DDR4 3200MHzSSD 512GB M.2 PCIe Intel Iris Xe GraphicsMàn hình 16 inch FHD+ (1920 x 1200) Windows 11 home SL 64-bit + Office home & student 2021Vỏ nhôm màu xám, 1.9kg",
+    "image": "https://philong.com.vn/media/product/250-27674-3.png"
+  },
 
-	{
-		"name": "Laptop Asus Vivobook 15X OLED A1503ZA-L1421W (Intel core i5 thế hệ 12-12500H, Ram 8GB, SSD 512GB, màn hình 15.6 Oled full HD, Windows 11 home bản quyền, Màu bạc, Bảo hành 24 tháng chính hãng",
-		"price": "19.990.000₫",
-		"discount": "10",
-		"guarantee": "Bảo hành 24 tháng chính hãng",
-		"category": "ASUS",
-		"description": "Tỏa sáng với cả thế giới cùng ASUS Vivobook 15X OLED, máy tính xách tay đầy đủ tính năng với màn hình OLED HDR cực sáng với dải màu DCI-P3 đẳng cấp điện ảnh. Vivobook 15X OLED cho phép hoàn thành mọi việc dễ dàng, mọi lúc mọi nơi: mọi khía cạnh đều được cải tiến, từ bộ vi xử lý di động Intel® thế hệ 12 mạnh mẽ tới bản lề duỗi thẳng 180°, thiết kế hình học thanh mảnh và màu sắc hiện đại. Bắt đầu ngày mới đầy hứng khởi với Vivobook 15X OLED",
-		"image": "https://philong.com.vn/media/product/250-28109-a1403-a1503_silver.jpg"
-	}
+  {
+    "name": "Laptop Asus Vivobook 15X OLED A1503ZA-L1421W (Intel core i5 thế hệ 12-12500H, Ram 8GB, SSD 512GB, màn hình 15.6 Oled full HD, Windows 11 home bản quyền, Màu bạc, Bảo hành 24 tháng chính hãng",
+    "price": "19.990.000₫",
+    "discount": "10",
+    "guarantee": "Bảo hành 24 tháng chính hãng",
+    "category": "ASUS",
+    "description": "Tỏa sáng với cả thế giới cùng ASUS Vivobook 15X OLED, máy tính xách tay đầy đủ tính năng với màn hình OLED HDR cực sáng với dải màu DCI-P3 đẳng cấp điện ảnh. Vivobook 15X OLED cho phép hoàn thành mọi việc dễ dàng, mọi lúc mọi nơi: mọi khía cạnh đều được cải tiến, từ bộ vi xử lý di động Intel® thế hệ 12 mạnh mẽ tới bản lề duỗi thẳng 180°, thiết kế hình học thanh mảnh và màu sắc hiện đại. Bắt đầu ngày mới đầy hứng khởi với Vivobook 15X OLED",
+    "image": "https://philong.com.vn/media/product/250-28109-a1403-a1503_silver.jpg"
+  },
 
-	{
-		"name": "MacBook Pro M2 2022 13.3 inch (MNEP3SAA) (8 core CPU, 10 core GPU, Ram 8GB, SSD 256GB) màu bạc, chính hãng",
-		"price": "34.490.000₫",
-		"discount": "10",
-		"guarantee": "chính hãng",
-		"category": "MACBOOK",
-		"description": "Với sự giúp sức của chip M2, MacBook Pro 2022 trở nên chuyên nghiệp hơn bao giờ hết. Kết cấu nhỏ nhắn, thời lượng pin 20 giờ và hệ thống làm mát hiệu quả giúp sản phẩm duy trì hiệu suất cao trong thời gian dài. Màn hình Retina, camera FaceTime HD và micro studio cũng là điểm cộng đem đến trải nghiệm xuất sắc.",
-		"image": "https://philong.com.vn/media/product/250-27760-21.jpg"
-	}
+  {
+    "name": "MacBook Pro M2 2022 13.3 inch (MNEP3SAA) (8 core CPU, 10 core GPU, Ram 8GB, SSD 256GB) màu bạc, chính hãng",
+    "price": "34.490.000₫",
+    "discount": "10",
+    "guarantee": "chính hãng",
+    "category": "MACBOOK",
+    "description": "Với sự giúp sức của chip M2, MacBook Pro 2022 trở nên chuyên nghiệp hơn bao giờ hết. Kết cấu nhỏ nhắn, thời lượng pin 20 giờ và hệ thống làm mát hiệu quả giúp sản phẩm duy trì hiệu suất cao trong thời gian dài. Màn hình Retina, camera FaceTime HD và micro studio cũng là điểm cộng đem đến trải nghiệm xuất sắc.",
+    "image": "https://philong.com.vn/media/product/250-27760-21.jpg"
+  },
 
-	{
-		"name": "Macbook Air 2020 M1 (MGND93) (Ram 8GB, SSD 256GB, màn hình 13.3inch, màu gold, Hàng chính hãng Apple VN, nguyên Seal)",
-		"price": "23.990.000₫",
-		"discount": "10",
-		"guarantee": "Hàng chính hãng Apple VN, nguyên Seal",
-		"category": "MACBOOK",
-		"description": "Chiếc MacBook Air có hiệu năng đột phá nhất từ trước đến nay đã xuất hiện. Bộ vi xử lý Apple M1 hoàn toàn mới đưa sức mạnh của MacBook Air M1 13 inch vượt xa khỏi mong đợi người dùng, có thể chạy được những tác vụ nặng và thời lượng pin đáng kinh ngạc.",
-		"image": "https://philong.com.vn/media/product/250-23792-apple-macbook-air-2020-m1-mgnd3-phi-long-1.png"
-	}
-
-	
+  {
+    "name": "Macbook Air 2020 M1 (MGND93) (Ram 8GB, SSD 256GB, màn hình 13.3inch, màu gold, Hàng chính hãng Apple VN, nguyên Seal)",
+    "price": "23.990.000₫",
+    "discount": "10",
+    "guarantee": "Hàng chính hãng Apple VN, nguyên Seal",
+    "category": "MACBOOK",
+    "description": "Chiếc MacBook Air có hiệu năng đột phá nhất từ trước đến nay đã xuất hiện. Bộ vi xử lý Apple M1 hoàn toàn mới đưa sức mạnh của MacBook Air M1 13 inch vượt xa khỏi mong đợi người dùng, có thể chạy được những tác vụ nặng và thời lượng pin đáng kinh ngạc.",
+    "image": "https://philong.com.vn/media/product/250-23792-apple-macbook-air-2020-m1-mgnd3-phi-long-1.png"
+  }
+]
